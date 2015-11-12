@@ -1,3 +1,26 @@
+# This is a mirror of the official **accounting.js** but with proper `git tag` releases.
+
+Due to faulty release on my part, I tagged a release to be a patch release higher than [accounting.js](https://github.com/openexchangerates/accounting.js/).
+That is no longer the case.
+If you got the wrong tag, and want the new one, please delete
+the old one and fetch the new one by doing:
+
+    git tag -d v0.4.3
+    git tag -d v0.4.2
+    git fetch origin tag v0.4.2
+
+to get my updated tag.
+
+You can test which tag you have by doing
+
+    git rev-parse v0.4.2
+
+which should return e24e5b8a0dc4894707caf3c719afcdbaacb98f78 if you have the new version.
+
+Sorry for the inconvenience.
+
+===================================================================================
+
 **accounting.js** is a tiny JavaScript library for number, money and currency parsing/formatting. It's lightweight, fully localisable, has no dependencies, and works great client-side or server-side. Use standalone or as a nodeJS/npm and AMD/requireJS module.
 
 Visit the plugin homepage for demos and documentation: **http://openexchangerates.github.io/accounting.js/**
@@ -26,9 +49,9 @@ Maintained by [Open Exchange Rates](https://openexchangerates.org "Free reliable
 **v0.3.2** - Fixed package.json dependencies (should be empty object)
 
 **v0.3.0**
-* Rewrote library structure similar to underscore.js for use as a nodeJS/npm and AMD module. Use `npm install accounting` and then `var accounting = require("accounting");` in your nodeJS scripts. 
+* Rewrote library structure similar to underscore.js for use as a nodeJS/npm and AMD module. Use `npm install accounting` and then `var accounting = require("accounting");` in your nodeJS scripts.
 * Also works with requireJS or any AMD module loader.
-* **unformat** now only attempts to parse the number if it's not already a valid number. 
+* **unformat** now only attempts to parse the number if it's not already a valid number.
 * `acounting.unformat` now also aliased as `acounting.parse`
 * Fixed an IE bug in the `defaults` method
 
